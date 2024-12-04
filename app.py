@@ -6,4 +6,4 @@ agent = Agent(
     markdown=True
 )
 # Print the response in the terminal
-agent.print_response("Share a 2 sentence horror story.")
+agent.print_response("Suggest some powerfull laptop")
