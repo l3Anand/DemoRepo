@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Story Generator</title>
+</head>
+<body>
+    <h1>Horror Story Generator</h1>
+    <form action="/generate" method="post">
+        <label for="prompt">Enter a prompt for a 2 sentence horror story:</label><br>
+        <input type="text" id="prompt" name="prompt"><br><br>
+        <input type="submit" value="Generate Story">
+    </form>
+    {% if response %}
+        <h2>Generated Story:</h2>
+        <p>{{ response|safe }}</p>
+    {% endif %}
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
